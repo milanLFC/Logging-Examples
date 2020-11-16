@@ -2,16 +2,7 @@
 import logging
 :
 import time
-sys.path.insert(0,'/home/milanp/mybin/Telegram')
 from datetime import datetime
-from dateutil.relativedelta import relativedelta
-from M_CheckProcess import M_WaitForProcessEnd
-from M_SendTelegram import M_telegram_bot_sendtext
-from M_FileFunctions import M_GetFileSize
-from M_FileFunctions import M_convert_bytes
-from M_FileFunctions import M_CleanFileName
-from M_FileFunctions import M_CreateDir
-from M_FileFunctions import M_MoveFiles
 
 # constants
 # select one of these two
