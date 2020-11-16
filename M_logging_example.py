@@ -37,6 +37,7 @@ logging.critical('This is a critical message')
 
 # some example log entries
 logging.info('>>> BEGIN:  %s' % os.path.basename(__file__))
+totalConversionStartTime = datetime.now()
 logging.info('>>> START TIME: %s' % totalConversionStartTime)
 
 logging.info('Working on directory: ' + currentDirectory)
