@@ -26,7 +26,12 @@ check the logfile
 myLogger = logging.getLogger('syslog')
 myLogger.setLevel(logging.INFO)
 
+#add handler to the logger
 handler = logging.handlers.SysLogHandler(address=('x.x.x.x',514))
+
+#add formatter to the handler
+formatter = logging.Formatter('Python: { "loggerName":"%(name)s", "timestamp":"%(asctime)s", "pathName":"%(pathname)s", "logRecordCreationTime":"%(created)f", "functionName":"%(funcName)s", "levelNo":"%(levelno)s", "lineNo":"%(lineno)d", "time":"%(msecs)d", "levelName":"%(levelname)s", "message":"%(message)s"}')
+handler.formatter = formatter
 
 myLogger.addHandler(handler)
 myLogger.info("Hello Hello !")
